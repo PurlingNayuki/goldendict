@@ -33,10 +33,11 @@ About::About( QWidget * parent ): QDialog( parent )
   QString compilerVersion = QLatin1String( "GCC " ) + QLatin1String( __VERSION__ );
 #endif
 
-  ui.qtVersion->setText( tr( "Based on Qt %1 (%2, %3 bit)" ).arg(
+  ui.qtVersion->setText( tr( "Based on Qt %1 (%2, %3 bit), %4" ).arg(
                            QLatin1String( qVersion() ),
                            compilerVersion,
-                           QString::number( QSysInfo::WordSize ) ) );
+                           QString::number( QSysInfo::WordSize ),
+                           QLatin1String( " P-N Mod" ) ) );
 
   QFile creditsFile( ":/CREDITS.txt" );
 
