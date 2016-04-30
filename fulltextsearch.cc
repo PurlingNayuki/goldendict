@@ -243,6 +243,9 @@ FullTextSearchDialog::FullTextSearchDialog( QWidget * parent,
   }
 
 #endif
+
+  ui.searchLine->setText( static_cast< MainWindow * >( parent )->getTranslateLineText() );
+  ui.searchLine->selectAll();
 }
 
 FullTextSearchDialog::~FullTextSearchDialog()
